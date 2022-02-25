@@ -19,7 +19,8 @@
   }
 }
 .baseAmountInput {
-  color: v.$color-primary;
-  background-color: v.$color-alt;
+  color: v.$color-light;
+  background-color: v.$color-primary;
   border: none;
+  border-bottom: white solid 1px;
 }

@@ -29,7 +29,8 @@ function Header({
     }
   };
   const handleInputChange = (event: React.FormEvent<HTMLInputElement>) => {
-    onChangeInputValue(event.currentTarget.value);
+    const value = Math.abs(Number(event.currentTarget.value));
+    onChangeInputValue(value);
   };
   let displayAmount = (
     <p className="header__baseamount" onClick={handleBaseAmountClick}>
@@ -49,6 +50,7 @@ function Header({
           onChange={handleInputChange}
           onBlur={handleBlur}
           onKeyPress={handleEnter}
+          min={0}
         />
         <span>Euro</span>
       </p>
