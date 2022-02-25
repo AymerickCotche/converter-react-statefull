@@ -1,0 +1,31 @@
+@use '/src/styles/vars' as v;
+
+.currencies {
+  background-color: v.$color-light;
+  color: v.$color-primary;
+  flex: 1;
+  overflow-y: scroll;
+  &__input {
+    padding: calc(v.$gutter * 1.5) v.$gutter v.$gutter v.$gutter;
+    border: none;
+    font-weight: v.$font-bold;
+    width: 100%;
+    color: v.$color-primary;
+    &::placeholder {
+      color: v.$color-alt;
+      font-weight: v.$font-bold;
+    }
+  }
+  &__list {
+    &__item {
+      padding: v.$gutter;
+      border-top: 1px solid #bc5435;
+      transition: background-color v.$transition-slow;
+      &:hover {
+        transition: background-color v.$transition-fast;
+        cursor: pointer;
+        background-color: v.$color-alt;
+      }
+    }
+  }
+}

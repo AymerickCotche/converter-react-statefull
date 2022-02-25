@@ -1,0 +1,16 @@
+@use '/src/styles/vars.scss' as v;
+
+.selected {
+  padding: calc(v.$gutter * 2);
+  background-color: v.$color-light;
+  color: v.$color-primary;
+  text-align: center;
+  &__value {
+    font-weight: v.$font-bold;
+    font-size: 2em;
+    margin-bottom: calc(v.$gutter / 2);
+  }
+  &__currency {
+    font-weight: v.$font-light;
+  }
+}

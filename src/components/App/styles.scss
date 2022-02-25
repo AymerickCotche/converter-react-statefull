@@ -1,0 +1,12 @@
+@use '/src/styles/vars.scss' as v;
+
+.app {
+  width: 90%;
+  max-width: 400px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: v.$gutter 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

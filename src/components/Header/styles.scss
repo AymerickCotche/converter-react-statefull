@@ -1,0 +1,25 @@
+@use '/src/styles/vars.scss' as v;
+
+.header {
+  padding: calc(v.$gutter * 2);
+  background-color: v.$color-primary;
+  color: v.$color-light;
+  text-align: center;
+
+  &__title {
+    font-weight: v.$font-bold;
+    font-size: 2em;
+    margin-bottom: calc(v.$gutter / 2);
+  }
+  &__baseamount {
+    font-weight: v.$font-light;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.baseAmountInput {
+  color: v.$color-primary;
+  background-color: v.$color-alt;
+  border: none;
+}
