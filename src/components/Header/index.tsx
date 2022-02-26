@@ -24,7 +24,7 @@ function Header({
     toggleBaseAmountState(!editAmountState);
   };
   const handleEnter = (event: React.KeyboardEvent) => {
-    if (event.code === 'Enter' || event.code === '13') {
+    if (event.key === 'Enter') {
       toggleBaseAmountState(!editAmountState);
     }
   };

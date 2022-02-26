@@ -32,6 +32,31 @@ export default class App extends React.Component<CounterProps, CounterState> {
     };
   }
 
+  componentDidMount() {
+    this.changeTitle();
+    document.addEventListener('keyup', (e) => {
+      console.log(e);
+    });
+  }
+
+  componentDidUpdate(prevProps: CounterProps, prevState: CounterState) {
+    const { currencyName } = this.state;
+    if (prevState.currencyName !== currencyName) {
+      console.log('on change le titre');
+      this.changeTitle();
+    }
+  }
+
+  componentWillUnmount() {
+    console.log('componentWillUnmount');
+  }
+
+  changeTitle = () => {
+    const { currencyName } = this.state;
+
+    document.title = `Euro to ${currencyName}`;
+  };
+
   setCurrency = (currencyName: string) => {
     this.setState({
       currencyName,
